@@ -1,0 +1,11 @@
+@mixin centeredHorizontal {
+  margin: 0 auto;
+}
+
+@mixin maxWidth1920 {
+  max-width: 1920px;
+}
+
+@mixin width100percents {
+  width: 100%;
+}
