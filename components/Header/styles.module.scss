@@ -1,0 +1,56 @@
+@import 'styles/colors';
+@import 'styles/mixins';
+
+.wrapper {
+  @include centeredHorizontal;
+  @include maxWidth1920;
+
+  > header {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    margin: 20px 97px 0;
+
+    > ul {
+      display: flex;
+      align-items: center;
+
+      > *:not(:last-child) {
+        margin-right: 28px !important;
+      }
+
+      > li {
+        list-style-type: none;
+
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+
+        color: $blue-1;
+
+        cursor: pointer;
+
+        > a {
+          position: relative;
+        }
+
+        &:hover {
+          color: $blue-2;
+
+          > a:after {
+            content: ' ';
+            width: 11px;
+            height: 3px;
+            bottom: -5px;
+            background-color: $blue-2;
+            position: absolute;
+            border-radius: 32px;
+            left: calc(50% - 11px / 2);
+          }
+        }
+      }
+    }
+  }
+}
