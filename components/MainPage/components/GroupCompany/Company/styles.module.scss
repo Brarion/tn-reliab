@@ -1,0 +1,88 @@
+@import 'styles/colors';
+
+.company {
+  display: flex;
+  align-items: flex-start;
+  > .companyInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-left: 20px;
+
+    > h2 {
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 30px;
+      color: $black-2;
+
+      margin-bottom: 10px;
+    }
+
+    > p {
+      font-size: 15px;
+      line-height: 18px;
+      color: $black-3;
+      white-space: pre-line;
+      max-width: 420px;
+      margin-bottom: 19px;
+    }
+
+    .additionalInfo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > button {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        border: none;
+        background-color: transparent;
+        color: $blue-2;
+        padding: 0;
+
+        &:hover {
+          cursor: pointer;
+          background-image: $gradient-1;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .line {
+        border-left: 1px solid $gray-2;
+        width: 0;
+        height: 40px;
+
+        margin: 0 30px;
+      }
+
+      > .stuff {
+        display: flex;
+        justify-content: space-between;
+
+        margin-right: 40px;
+        > p {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+          color: $gray-1;
+          margin-left: 10px;
+        }
+      }
+
+      > .projects {
+        display: flex;
+        > p {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+          color: $gray-1;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
