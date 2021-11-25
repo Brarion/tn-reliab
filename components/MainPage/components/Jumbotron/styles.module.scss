@@ -1,0 +1,113 @@
+@import 'styles/colors';
+@import 'styles/mixins';
+
+.wrapper {
+  @include centeredHorizontal;
+  @include maxWidth1920;
+
+  > .mainContent {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 139px 149px 0 291px;
+
+    > .leftSide {
+      > .text {
+        display: flex;
+        flex-direction: column;
+
+        white-space: pre-line;
+
+        > h2 {
+          color: $black-2;
+          font-size: 35px;
+          line-height: 43px;
+          margin-bottom: 40px;
+          font-weight: bold;
+        }
+
+        > p {
+          color: $black-1;
+          font-size: 15px;
+          line-height: 18px;
+          margin-bottom: 60px;
+        }
+      }
+
+      > aside {
+        font-size: 15px;
+        line-height: 18px;
+        color: $gray-1;
+
+        white-space: pre-line;
+
+        > .line {
+          border: 1px solid $gray-2;
+          width: 462px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  > .information {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 50px 196px 0 291px;
+
+    > .contacts {
+      display: flex;
+      justify-content: space-between;
+
+      > .item {
+        display: flex;
+        margin-right: 147px;
+
+        > *:first-child {
+          width: 50px !important;
+          height: 50px !important;
+        }
+
+        > .contactInfo {
+          margin-left: 20px;
+
+          > h3 {
+            font-size: 15px;
+            line-height: 18px;
+            color: $gray-2;
+            margin-bottom: 7px;
+          }
+
+          > p {
+            font-size: 18px;
+            line-height: 22px;
+            color: $black-3;
+            font-weight: bold;
+
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    > .business {
+      display: flex;
+      justify-content: space-between;
+
+      > *:not(:last-child) {
+        margin-right: 77px;
+      }
+
+      > .item {
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+
+        color: $gray-1;
+        white-space: pre-line;
+        cursor: pointer;
+      }
+    }
+  }
+}
