@@ -1,0 +1,22 @@
+@import 'styles/colors';
+
+.button {
+  width: 221px;
+  height: 53px;
+  background: $blue-2;
+  border-radius: 7px;
+  border: none;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  color: white;
+
+  margin-bottom: 208px;
+
+  &:hover {
+    cursor: pointer;
+    background: linear-gradient(199.88deg, rgba(124, 70, 180, 0.97) -32.33%, rgba(54, 77, 198, 0.97) 131.24%);
+  }
+}
