@@ -11,19 +11,19 @@ const Header = () => {
           <li>
             <a href={'/main'}>Главная</a>
           </li>
-          <Image className={styles.ellipse} alt={''} src={'/assets/ellipse.svg'} width={4} height={4} />
+          <Image alt={''} src={'/assets/ellipse.svg'} width={4} height={4} />
           <li>
             <a href={'/about-as'}>О нас</a>
           </li>
-          <Image className={styles.ellipse} alt={''} src={'/assets/ellipse.svg'} width={4} height={4} />
+          <Image alt={''} src={'/assets/ellipse.svg'} width={4} height={4} />
           <li>
             <a href={'/blog'}>Блог</a>
           </li>
-          <Image className={styles.ellipse} alt={''} src={'/assets/ellipse.svg'} width={4} height={4} />
+          <Image alt={''} src={'/assets/ellipse.svg'} width={4} height={4} />
           <li>
             <a href={'/contacts'}>Контакты</a>
           </li>
-          <Image className={styles.ellipse} alt={''} src={'/assets/ellipse.svg'} width={4} height={4} />
+          <Image alt={''} src={'/assets/ellipse.svg'} width={4} height={4} />
           <li>
             <a href={'/vacancy'}>Вакансии</a>
           </li>
