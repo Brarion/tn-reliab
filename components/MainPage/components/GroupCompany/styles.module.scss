@@ -1,0 +1,50 @@
+@import 'styles/colors';
+@import 'styles/mixins';
+
+.wrapper {
+  @include centeredHorizontal;
+  @include maxWidth1920;
+
+  > .text {
+    margin: 164px 291px 127px 291px;
+
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 63px;
+    > .text1 {
+      color: $blue-2;
+    }
+    > .text2 {
+      background-image: $gradient-2;
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      > *:nth-child(2) {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  > .information {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    margin: 127px 291px 0 291px;
+    row-gap: 50px;
+
+    .verticalLine {
+      border-left: 1px solid $gray-2;
+      width: 0;
+      height: calc(100% + 19px);
+
+      margin: 0 auto;
+    }
+
+    .horizontalLine {
+      border-bottom: 1px solid $gray-2;
+      width: calc(100% + 25px);
+      height: 0;
+      margin: auto 0;
+    }
+  }
+}
