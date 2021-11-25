@@ -1,6 +1,6 @@
-import styles from './styles.module.scss'
-import Button from '@components/Button'
 import Image from 'next/image'
+import Button from '@components/Button'
+import styles from './styles.module.scss'
 
 const Jumbotron = () => {
   return (
@@ -16,7 +16,7 @@ const Jumbotron = () => {
             <Button text={'старт с нами'} />
           </div>
           <aside className={styles.devInfo}>
-            <div className={styles.line}></div>
+            <div className={styles.line} />
             {`Сайт находится в режиме разработки.\nБудем рады ответить на Ваши вопросы`}
           </aside>
         </div>
@@ -28,14 +28,14 @@ const Jumbotron = () => {
             <Image src={'/assets/tel.svg'} alt={''} width={50} height={50} />
             <div className={styles.contactInfo}>
               <h3>Приёмная</h3>
-              <p>+7 (800) 555-30-53</p>
+              <a href={'tel:+7 (800) 555-30-53'}>+7 (800) 555-30-53</a>
             </div>
           </div>
           <div className={styles.item}>
             <Image src={'/assets/email.svg'} alt={''} width={50} height={50} />
             <div className={styles.contactInfo}>
               <h3>Менеджер</h3>
-              <p>tn@reliab.tech</p>
+              <a href={'mailto:tn@reliab.tech'}>tn@reliab.tech</a>
             </div>
           </div>
         </div>
