@@ -1,0 +1,55 @@
+@import 'styles/colors';
+@import 'styles/mixins';
+
+.wrapper {
+  @include centeredHorizontal;
+  @include maxWidth1920;
+  margin-top: 270px;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 291px;
+    .left {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-family: 'MontserratBold', sans-serif;
+        font-size: 35px;
+        line-height: 43px;
+        color: $black-2;
+        max-width: 442px;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 18px;
+        color: $gray-1;
+        max-width: 640px;
+        margin-bottom: 50px;
+      }
+
+      .maps {
+        display: flex;
+        .item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 174px;
+          height: 50px;
+          background: white;
+          border-radius: 7px;
+          cursor: pointer;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .right {
+      margin-bottom: 153px;
+    }
+  }
+}
