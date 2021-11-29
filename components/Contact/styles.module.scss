@@ -1,0 +1,37 @@
+@import 'styles/colors';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .button {
+    width: 465px;
+    height: 65px;
+    box-shadow: 0 17px 89px rgba(56, 81, 208, 0.29);
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 153px;
+  }
+
+  > :nth-child(2),
+  :nth-child(3) {
+    margin-bottom: 20px;
+  }
+  > :nth-child(4) {
+    margin-bottom: 30px;
+  }
+
+  .errors {
+    display: flex;
+    font-family: 'MontserratMedium', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: $red-1;
+    margin-bottom: 8px;
+    height: 15px;
+    span {
+      margin-right: 10px;
+    }
+  }
+}
