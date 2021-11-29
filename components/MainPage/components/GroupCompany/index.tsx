@@ -29,6 +29,7 @@ const GroupCompany = () => {
           textProjects={'проектов'}
         />
         <div className={styles.verticalLine} />
+        <div className={styles.lineColumn} />
         <Company
           image={geoexpert}
           header={'Geoexpert'}
@@ -39,8 +40,9 @@ const GroupCompany = () => {
           textProjects={'проектов'}
         />
         <div className={styles.horizontalLine} />
-        <div />
+        <div className={styles.emptyBlock} />
         <div className={styles.horizontalLine} />
+        <div className={styles.lineColumn} />
         <Company
           image={kvanta}
           header={'KVANTA'}
@@ -51,6 +53,7 @@ const GroupCompany = () => {
           textProjects={'проектов'}
         />
         <div className={styles.verticalLine} />
+        <div className={styles.lineColumn} />
         <Company
           image={element}
           header={'Пятый элемент'}
@@ -61,8 +64,9 @@ const GroupCompany = () => {
           textProjects={'проектов'}
         />
         <div className={styles.horizontalLine} />
-        <div />
+        <div className={styles.emptyBlock} />
         <div className={styles.horizontalLine} />
+        <div className={styles.lineColumn} />
         <Company
           image={expertChoice}
           header={'Expert Choice CIS'}
@@ -73,6 +77,7 @@ const GroupCompany = () => {
           textProjects={'проектов'}
         />
         <div className={styles.verticalLine} />
+        <div className={styles.lineColumn} />
         <Company
           image={skypower}
           header={'Skypower'}
