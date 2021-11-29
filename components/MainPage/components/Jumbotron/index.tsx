@@ -3,6 +3,10 @@ import Button from '@components/Button'
 import styles from './styles.module.scss'
 
 const Jumbotron = () => {
+  const onclick = () => {
+    // Перейти на Contacts
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.mainContent}>
@@ -13,7 +17,7 @@ const Jumbotron = () => {
               {`Уделяем особое внимание проектированию интерфейсов,
               в результате чего мы с горостью можем назвать наши продукты Надёжными!`}
             </p>
-            <Button text={'старт с нами'} className={''} />
+            <Button text={'старт с нами'} className={''} onClick={onclick} type={'button'} />
           </div>
           <aside className={styles.devInfo}>
             <div className={styles.line} />
