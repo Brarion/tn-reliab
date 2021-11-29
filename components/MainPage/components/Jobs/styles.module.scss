@@ -1,0 +1,31 @@
+@import 'styles/colors';
+@import 'styles/mixins';
+
+.wrapper {
+  @include centeredHorizontal;
+  @include maxWidth1920;
+
+  .content {
+    margin: 0 291px;
+    position: relative;
+
+    .imgWrapper {
+      position: absolute;
+      left: -170px;
+      top: 350px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 37px;
+      color: $black-2;
+      margin-bottom: 50px;
+    }
+
+    .horizontalLine {
+      border-bottom: 1px solid $gray-2;
+      width: 100%;
+      height: 0;
+    }
+  }
+}
