@@ -1,4 +1,4 @@
-import Company from '@components/MainPage/components/GroupCompany/Company'
+import Company from '@components/MainPage/components/GroupCompany/components/Company'
 import styles from './styles.module.scss'
 import pirs from '@public/assets/pirs.svg'
 import geoexpert from '@public/assets/geoexpert.svg'
