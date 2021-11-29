@@ -13,7 +13,7 @@ const Jumbotron = () => {
               {`Уделяем особое внимание проектированию интерфейсов,
               в результате чего мы с горостью можем назвать наши продукты Надёжными!`}
             </p>
-            <Button text={'старт с нами'} />
+            <Button text={'старт с нами'} className={''} />
           </div>
           <aside className={styles.devInfo}>
             <div className={styles.line} />
