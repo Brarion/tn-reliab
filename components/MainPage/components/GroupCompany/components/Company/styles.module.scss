@@ -3,14 +3,20 @@
 .company {
   display: flex;
   align-items: flex-start;
-  > .companyInfo {
+
+  > *:first-child {
+    min-width: 60px;
+    min-height: 60px;
+  }
+
+  .companyInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     margin-left: 20px;
 
-    > h2 {
+    h2 {
       font-family: 'MontserratBold', sans-serif;
       font-size: 25px;
       line-height: 30px;
@@ -27,63 +33,119 @@
       max-width: 420px;
       margin-bottom: 19px;
     }
+  }
+}
 
-    .additionalInfo {
+.additionalInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+
+  > button {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    color: $blue-2;
+    padding: 0;
+
+    &:hover {
+      cursor: pointer;
+      background-image: $gradient-1;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .line {
+    border-left: 1px solid $gray-2;
+    width: 0;
+    height: 40px;
+
+    margin: 0 30px;
+  }
+
+  .stuff {
+    display: flex;
+    justify-content: space-between;
+
+    margin-right: 40px;
+
+    > p {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: $gray-1;
+      margin-left: 10px;
+      white-space: nowrap;
+    }
+  }
+
+  .projects {
+    display: flex;
+
+    p {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: $gray-1;
+      margin-left: 10px;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .company {
+    align-items: center;
+
+    .companyInfo {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      z-index: 2;
-      > button {
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 17px;
-        text-transform: uppercase;
-        border: none;
-        background-color: transparent;
-        color: $blue-2;
-        padding: 0;
 
-        &:hover {
-          cursor: pointer;
-          background-image: $gradient-1;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
+      margin-left: 20px;
+
+      > h2 {
+        font-size: 20px;
+        line-height: 24px;
       }
+    }
+  }
 
-      .line {
-        border-left: 1px solid $gray-2;
-        width: 0;
-        height: 40px;
+  .additionalInfo {
+    display: grid;
+    grid-template-areas: 'stuff projects' 'button line';
+    grid-template-columns: max-content 1fr;
+    column-gap: 30px;
+    row-gap: 35px;
+    z-index: 2;
+    justify-items: start;
+    > button {
+      grid-area: button;
+    }
 
-        margin: 0 30px;
+    .line {
+      display: none;
+    }
+
+    > .stuff {
+      grid-area: stuff;
+      margin-right: 0;
+      > p {
+        font-size: 13px;
+        line-height: 16px;
       }
+    }
 
-      > .stuff {
-        display: flex;
-        justify-content: space-between;
-
-        margin-right: 40px;
-        > p {
-          font-weight: 600;
-          font-size: 14px;
-          line-height: 17px;
-          color: $gray-1;
-          margin-left: 10px;
-          white-space: nowrap;
-        }
-      }
-
-      > .projects {
-        display: flex;
-        > p {
-          font-weight: 600;
-          font-size: 14px;
-          line-height: 17px;
-          color: $gray-1;
-          margin-left: 10px;
-          white-space: nowrap;
-        }
+    > .projects {
+      grid-area: projects;
+      > p {
+        font-size: 13px;
+        line-height: 16px;
       }
     }
   }

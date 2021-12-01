@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import styles from './styles.module.scss'
+import { ReactNode } from 'react'
+import useResize from '../../../../../../utils/useResize'
 
 type Props = {
   image: string
@@ -14,11 +16,12 @@ type Props = {
 
 const Company = (props: Props) => {
   const { image, header, text, countEmployees, countProjects, textEmployees, textProjects, openModal } = props
-  return (
-    <article className={styles.company}>
-      <Image src={image} alt={header} width={77} height={77} />
-      <div className={styles.companyInfo}>
-        <h2>{header}</h2>
+
+  const width = useResize()
+
+  const getTextAndAdditionalInfo = (): ReactNode => {
+    return (
+      <>
         <p>{text}</p>
         <div className={styles.additionalInfo}>
           <button onClick={openModal}>СВЯЗАТЬСЯ</button>
@@ -36,8 +39,21 @@ const Company = (props: Props) => {
             </p>
           </div>
         </div>
-      </div>
-    </article>
+      </>
+    )
+  }
+
+  return (
+    <>
+      <article className={styles.company}>
+        <Image src={image} alt={header} width={77} height={77} />
+        <div className={styles.companyInfo}>
+          <h2>{header}</h2>
+          {width > 768 && getTextAndAdditionalInfo()}
+        </div>
+      </article>
+      {width <= 768 && getTextAndAdditionalInfo()}
+    </>
   )
 }
 
