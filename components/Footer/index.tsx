@@ -37,13 +37,14 @@ const Footer = () => {
             </div>
             <div className={styles.contact}>
               <div className={styles.item}>
-                <a href={''}>Вконтакте</a>
+                <a href={'https://vk.com/reliab.tech'} rel="noreferrer" target="_blank">
+                  Вконтакте
+                </a>
               </div>
               <div className={styles.item}>
-                <a href={''}>Instagram</a>
-              </div>
-              <div className={styles.item}>
-                <a href={''}>Twitter</a>
+                <a href={'https://instagram.com/reliab_tech?utm_medium=copy_link'} rel="noreferrer" target="_blank">
+                  Instagram
+                </a>
               </div>
             </div>
           </div>
