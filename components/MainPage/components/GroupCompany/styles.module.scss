@@ -1,6 +1,28 @@
 @import 'styles/colors';
 @import 'styles/mixins';
 
+.modal {
+  margin-bottom: 50px;
+  h2 {
+    font-family: 'MontserratBold', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    color: $black-2;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: $gray-1;
+    margin-bottom: 50px;
+  }
+}
+
 .wrapper {
   @include centeredHorizontal;
   @include maxWidth1920;

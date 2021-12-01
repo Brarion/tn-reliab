@@ -9,10 +9,11 @@ type Props = {
   countProjects: number
   textEmployees: string
   textProjects: string
+  openModal: () => void
 }
 
 const Company = (props: Props) => {
-  const { image, header, text, countEmployees, countProjects, textEmployees, textProjects } = props
+  const { image, header, text, countEmployees, countProjects, textEmployees, textProjects, openModal } = props
   return (
     <article className={styles.company}>
       <Image src={image} alt={header} width={77} height={77} />
@@ -20,7 +21,7 @@ const Company = (props: Props) => {
         <h2>{header}</h2>
         <p>{text}</p>
         <div className={styles.additionalInfo}>
-          <button>СВЯЗАТЬСЯ</button>
+          <button onClick={openModal}>СВЯЗАТЬСЯ</button>
           <div className={styles.line} />
           <div className={styles.stuff}>
             <Image src={'/assets/stuff.svg'} alt={''} width={14} height={15} />
