@@ -4,13 +4,46 @@
 .wrapper {
   @include centeredHorizontal;
   @include maxWidth1920;
+  position: relative;
+
+  .imgWrapper1 {
+    position: absolute;
+    left: 500px;
+    top: -60px;
+    background: $blue-4;
+    opacity: 0.77;
+    filter: blur(180px);
+    z-index: 1;
+  }
+  .imgWrapper2 {
+    position: absolute;
+    left: 580px;
+    top: -160px;
+    background: $pink-1;
+    filter: blur(190px);
+    z-index: 1;
+  }
+
+  .imgWrapper3 {
+    position: absolute;
+    left: -290px;
+    top: 720px;
+    background: $blue-5;
+    opacity: 1;
+    filter: blur(402px);
+    z-index: 1;
+  }
 
   > .mainContent {
     display: grid;
     grid-template-columns: auto 1fr;
 
-    margin: 139px 149px 0 291px;
+    max-width: calc(1338px + 2 * 30px);
 
+    @include centeredHorizontal;
+
+    padding: 139px 30px 0 30px;
+    position: relative;
     > .leftSide {
       > .text {
         display: flex;
@@ -62,16 +95,19 @@
   > .information {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
-    margin: 50px 196px 0 291px;
+    max-width: calc(1338px + 2 * 30px);
 
+    @include centeredHorizontal;
+    padding: 50px 30px 0;
     > .contacts {
       display: flex;
       justify-content: space-between;
 
+      margin-bottom: 30px;
       > .item {
         display: flex;
-        margin-right: 147px;
 
         > *:first-child {
           width: 50px !important;
@@ -97,6 +133,13 @@
             white-space: nowrap;
           }
         }
+      }
+
+      > *:first-child {
+        margin-right: 147px;
+      }
+      > *:last-child {
+        margin-right: 10px;
       }
     }
 

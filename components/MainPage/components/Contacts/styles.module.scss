@@ -5,13 +5,34 @@
   @include centeredHorizontal;
   @include maxWidth1920;
   margin-top: 270px;
+  position: relative;
 
+  .imgWrapper1 {
+    position: absolute;
+    left: 290px;
+    top: -140px;
+    background: $blue-4;
+    opacity: 0.77;
+    filter: blur(150px);
+    z-index: 1;
+  }
+  .imgWrapper2 {
+    position: absolute;
+    left: 220px;
+    top: -90px;
+    background: $pink-1;
+    filter: blur(200px);
+    z-index: 1;
+  }
   .content {
     display: grid;
     grid-template-columns: auto max-content;
     column-gap: 20px;
+    max-width: calc(1338px + 2 * 30px);
 
-    margin: 0 291px;
+    @include centeredHorizontal;
+
+    padding: 0 30px;
     .left {
       display: flex;
       flex-direction: column;
@@ -56,6 +77,14 @@
 
     .right {
       margin-bottom: 153px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .wrapper {
+    .content {
+      grid-template-columns: 1fr;
     }
   }
 }
