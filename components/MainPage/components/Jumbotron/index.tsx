@@ -26,19 +26,21 @@ const Jumbotron = () => {
       <div className={styles.mainContent}>
         <div className={styles.leftSide}>
           <div className={styles.text}>
-            <h2>{`Помогаем вашему бизнесу\nпрокачаться до максимального уровня`}</h2>
+            <h2>Помогаем вашему бизнесу прокачаться до максимального уровня</h2>
             <p>
-              {`Уделяем особое внимание проектированию интерфейсов,
-              в результате чего мы с горостью можем назвать наши продукты Надёжными!`}
+              Уделяем особое внимание проектированию интерфейсов, в результате чего мы с горостью можем назвать наши
+              продукты Надёжными!
             </p>
-            <Button text={'старт с нами'} className={''} onClick={handleClick} type={'button'} />
+            <Button text={'старт с нами'} className={styles.button} onClick={handleClick} type={'button'} />
           </div>
-          <aside className={styles.devInfo}>
+          <aside>
             <div className={styles.line} />
-            {`Сайт находится в режиме разработки.\nБудем рады ответить на Ваши вопросы`}
+            <p>Сайт находится в режиме разработки. Будем рады ответить на Ваши вопросы</p>
           </aside>
         </div>
-        <Image alt={'Технологии надёжности'} src={'/assets/phone.png'} width={700} height={700} priority />
+        <div className={styles.imgPhoneWrapper}>
+          <img alt={'Технологии надёжности'} src={'/assets/phone.png'} />
+        </div>
       </div>
       <div className={styles.information}>
         <div className={styles.contacts}>
