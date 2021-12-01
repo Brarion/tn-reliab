@@ -3,6 +3,7 @@ import Jumbotron from '@components/MainPage/components/Jumbotron'
 import GroupCompany from '@components/MainPage/components/GroupCompany'
 import Jobs from '@components/MainPage/components/Jobs'
 import Contacts from '@components/MainPage/components/Contacts'
+import Footer from '@components/Footer'
 
 const MainPage = () => {
   return (
@@ -12,6 +13,7 @@ const MainPage = () => {
       <GroupCompany />
       <Jobs />
       <Contacts />
+      <Footer />
     </div>
   )
 }
