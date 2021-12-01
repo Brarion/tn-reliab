@@ -78,13 +78,52 @@
     .right {
       margin-bottom: 153px;
     }
+
+    .maps {
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 174px;
+        height: 50px;
+        background: white;
+        border-radius: 7px;
+        cursor: pointer;
+      }
+
+      > *:not(:last-child) {
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 914px) {
   .wrapper {
     .content {
       grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, max-content);
+
+      .left {
+        p {
+          margin-bottom: 20px;
+        }
+      }
+
+      .right {
+        margin-bottom: 100px;
+      }
+
+      .maps {
+        .item {
+          width: 271px;
+          height: 84px;
+        }
+      }
     }
   }
 }
