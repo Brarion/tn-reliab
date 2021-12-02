@@ -5,7 +5,6 @@ import React from 'react'
 
 import Background1 from '@public/assets/background1.svg'
 import Background2 from '@public/assets/background2.svg'
-import Background3 from '@public/assets/background3.svg'
 
 const Jumbotron = () => {
   const handleClick = () => {
@@ -19,9 +18,6 @@ const Jumbotron = () => {
       </div>
       <div className={styles.imgWrapper2}>
         <Image src={Background2} alt={''} width={176} height={176} />
-      </div>
-      <div className={styles.imgWrapper3}>
-        <Image src={Background3} alt={''} width={466} height={466} />
       </div>
       <div className={styles.mainContent}>
         <div className={styles.leftSide}>

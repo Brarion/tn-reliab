@@ -9,8 +9,10 @@ import kvanta from '@public/assets/kvanta.svg'
 import element from '@public/assets/element.svg'
 import expertChoice from '@public/assets/expertChoice.svg'
 import skypower from '@public/assets/skypower.svg'
-import Background1 from '@public/assets/background4.svg'
 import Modal from '@components/Modal'
+import Background1 from '@public/assets/background3.svg'
+import Background2 from '@public/assets/background4.svg'
+import Background3 from '@public/assets/background7.svg'
 
 const GroupCompany = () => {
   const [openedModal, setOpenedModal] = useState<boolean>(false)
@@ -37,7 +39,16 @@ const GroupCompany = () => {
 
       <div className={styles.wrapper}>
         <div className={styles.imgWrapper1}>
-          <Image src={Background1} alt={''} width={704} height={704} />
+          <Image src={Background1} alt={''} width={466} height={466} />
+        </div>
+        <div className={styles.imgWrapper2}>
+          <Image src={Background2} alt={''} width={704} height={704} />
+        </div>
+        <div className={styles.imgWrapper3}>
+          <Image src={Background1} alt={''} width={210} height={210} />
+        </div>
+        <div className={styles.imgWrapper4}>
+          <Image src={Background3} alt={''} width={198} height={198} />
         </div>
         <div className={styles.text}>
           <span className={styles.text1}>Группа компаний ТН </span>
