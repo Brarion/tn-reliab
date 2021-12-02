@@ -10,9 +10,12 @@
     display: flex;
     justify-content: space-between;
 
-    margin: 20px 97px 0;
+    max-width: calc(1726px + 2 * 30px);
+    @include centeredHorizontal;
 
-    > ul {
+    padding: 20px 30px 0;
+
+    ul {
       display: flex;
       align-items: center;
 
@@ -20,7 +23,7 @@
         margin-right: 28px !important;
       }
 
-      > li {
+      li {
         list-style-type: none;
 
         text-decoration: none;
