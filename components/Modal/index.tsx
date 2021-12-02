@@ -31,7 +31,7 @@ const Modal = ({ children, onClose }: Props) => {
       </div>
       <div className={styles.modal}>
         <div className={styles.closeModalIcon} onClick={onClose}>
-          <Image src={'/assets/closeModalIcon.svg'} alt={''} width={15} height={15} />
+          <Image src={'/assets/closeModalIcon.svg'} alt={''} width={16} height={16} />
         </div>
         {children}
       </div>

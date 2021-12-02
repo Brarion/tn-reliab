@@ -1,11 +1,15 @@
 @import 'styles/colors';
 @import 'styles/mixins';
 
-.modal {
+.modalContent {
   margin-bottom: 50px;
   padding: 50px 115px;
 
-  h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > h2 {
     font-family: 'MontserratBold', sans-serif;
     font-weight: bold;
     font-size: 25px;
@@ -15,7 +19,7 @@
     margin-bottom: 20px;
   }
 
-  p {
+  > p {
     font-size: 15px;
     line-height: 18px;
     text-align: center;
@@ -192,6 +196,20 @@
       .lineColumn {
         margin: 15px 0;
       }
+    }
+  }
+
+  .modalContent {
+    padding: 0 24px 0 25px;
+    > h2 {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 10px;
+      margin-top: 18px;
+    }
+
+    > p {
+      margin-bottom: 30px;
     }
   }
 }

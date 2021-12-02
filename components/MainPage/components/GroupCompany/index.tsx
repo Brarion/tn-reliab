@@ -29,7 +29,7 @@ const GroupCompany = () => {
     <>
       {openedModal && (
         <Modal onClose={closeModal}>
-          <div className={styles.modal}>
+          <div className={styles.modalContent}>
             <h2>Мы свяжемся с Вами</h2>
             <p>Оставьте свои контактные данные и наш специалист ответит Вам в кратчайшие сроки</p>
             <Contact />

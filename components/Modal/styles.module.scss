@@ -27,14 +27,14 @@
 
   .modal {
     position: absolute;
-    width: 50%;
-    height: 660px;
+    width: 756px;
+    height: 683px;
 
     background: white;
     z-index: 10;
 
     top: calc(50% - 683px / 2);
-    left: calc(50% - 50% / 2);
+    left: calc(50% - 756px / 2);
 
     border-radius: 7px;
     padding: 30px;
@@ -44,8 +44,42 @@
 
     .closeModalIcon {
       position: absolute;
-      right: 30px;
       cursor: pointer;
+      right: 30px;
+      top: 30px;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .modalWrapper {
+    .modal {
+      width: 633px;
+      left: calc(50% - 633px / 2);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modalWrapper {
+    .modal {
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 100%;
+      padding: 32px 0 0 0;
+      border-radius: 0;
+      .closeModalIcon {
+        right: 24px;
+        top: 24px;
+        width: 31px;
+        height: 31px;
+      }
     }
   }
 }

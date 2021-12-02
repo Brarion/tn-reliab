@@ -15,6 +15,7 @@ type FormItem = {
   placeholder: string
   type: string
   error: boolean
+  helperText: string
 }
 
 type Form = { [key in FORM_KEY]: FormItem }
@@ -25,37 +26,45 @@ const FORM_INITIAL_VALUES: Form = {
     placeholder: 'Как к Вам обратиться?',
     type: 'text',
     error: false,
+    helperText: '',
   },
   [FORM_KEY.EMAIL]: {
     value: '',
     placeholder: 'Ваш email',
     type: 'email',
     error: false,
+    helperText: '',
   },
   [FORM_KEY.COMMENT]: {
     value: '',
-    placeholder: 'Сообщение (необязательно)',
+    placeholder: 'Сообщение',
     type: 'text',
     error: false,
+    helperText: '',
   },
 }
 
 const Contact = () => {
   const [form, setForm] = useState<Form>(FORM_INITIAL_VALUES)
   const validate = () => {
-    const validateText = (value: string) => {
-      return value === ''
+    const validateText = (value: string): { error: boolean; helperText: string } => {
+      return value === '' ? { error: true, helperText: '*Обязательное поле' } : { error: false, helperText: '' }
     }
 
-    const validateEmail = (value: string) => {
-      return value === '' || !/@/.test(value)
+    const validateEmail = (value: string): { error: boolean; helperText: string } => {
+      if (value === '') {
+        return { error: true, helperText: '*Обязательное поле' }
+      } else if (!/@/.test(value)) {
+        return { error: true, helperText: '*Неверный формат поля' }
+      }
+
+      return { error: false, helperText: '' }
     }
 
     const newForm = { ...form }
 
-    newForm.text.error = validateText(newForm.text.value)
-    newForm.email.error = validateEmail(newForm.email.value)
-
+    newForm.text = { ...newForm.text, ...validateText(newForm.text.value) }
+    newForm.email = { ...newForm.email, ...validateEmail(newForm.email.value) }
     setForm(newForm)
 
     return new Promise((resolve, reject) => {
@@ -87,10 +96,7 @@ const Contact = () => {
   return (
     <form className={styles.wrapper}>
       <div className={styles.errors}>
-        {((form.text.error && form.text.value === '') || (form.email.error && form.email.value === '')) && (
-          <span>*Заполните все обязательные поля</span>
-        )}
-        {form.email.error && <span>*Неверный формат поля</span>}
+        {(form.text.error || form.email.error) && <p>Заполните все обязательные поля</p>}
       </div>
       <Input
         type={form.text.type}
@@ -98,6 +104,7 @@ const Contact = () => {
         value={form.text.value}
         error={form.text.error}
         onChange={(value) => onChange(FORM_KEY.TEXT, value)}
+        helperText={form.text.helperText}
       />
       <Input
         type={form.email.type}
@@ -105,12 +112,14 @@ const Contact = () => {
         value={form.email.value}
         error={form.email.error}
         onChange={(value) => onChange(FORM_KEY.EMAIL, value)}
+        helperText={form.email.helperText}
       />
       <TextArea
         placeholder={form.comment.placeholder}
         value={form.comment.value}
         error={form.comment.error}
         onChange={(value) => onChange(FORM_KEY.COMMENT, value)}
+        helperText={form.comment.helperText}
       />
       <Button text={'Отправить'} className={styles.button} onClick={submit} type={'button'} />
     </form>
