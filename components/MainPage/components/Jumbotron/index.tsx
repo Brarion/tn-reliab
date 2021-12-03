@@ -35,7 +35,7 @@ const Jumbotron = () => {
           </aside>
         </div>
         <div className={styles.imgPhoneWrapper}>
-          <img alt={'Технологии надёжности'} src={'/assets/phone.png'} />
+          <img alt={'Технологии надёжности'} src={'/assets/phone1.png'} />
         </div>
       </div>
       <div className={styles.information}>
