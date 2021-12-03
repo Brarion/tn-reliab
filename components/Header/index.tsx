@@ -23,7 +23,7 @@ const Header = () => {
       <div className={styles.wrapper}>
         <header>
           <div className={styles.imgLogoWrapper}>
-            <Image src={'/assets/logo.svg'} alt={'Технологии надежности'} width={128} height={40} />
+            <Image loading={'eager'} src={'/assets/logo.svg'} alt={'Технологии надежности'} width={128} height={40} />
           </div>
           {width > 768 && (
             <ul>
@@ -46,7 +46,7 @@ const Header = () => {
           )}
           {width <= 768 && !openedMenu && (
             <div className={styles.btnMenu} onClick={openMenu}>
-              <Image src={'/assets/btnOpenMenu.svg'} alt={''} width={25} height={25} />
+              <Image loading={'eager'} src={'/assets/btnOpenMenu.svg'} alt={''} width={25} height={25} />
             </div>
           )}
         </header>
