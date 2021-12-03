@@ -4,11 +4,11 @@ const useResize = () => {
   const [width, setWidth] = React.useState<number>(1920)
 
   const handleResize = () => {
-    return setWidth(window.outerWidth)
+    return setWidth(window.innerWidth)
   }
 
   React.useEffect(() => {
-    setWidth(window.outerWidth)
+    setWidth(window.innerWidth)
     window.addEventListener('resize', handleResize)
     return () => {
       window.removeEventListener('resize', handleResize)
