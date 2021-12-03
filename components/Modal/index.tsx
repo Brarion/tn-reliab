@@ -1,6 +1,6 @@
 import React, { ReactNode, useEffect } from 'react'
 import Image from 'next/image'
-
+import BtnCloseModal from '@public/assets/closeModalIcon.svg'
 import styles from './styles.module.scss'
 
 type Props = {
@@ -31,7 +31,7 @@ const Modal = ({ children, onClose }: Props) => {
       </div>
       <div className={styles.modal}>
         <div className={styles.closeModalIcon} onClick={onClose}>
-          <Image src={'/assets/closeModalIcon.svg'} alt={''} width={16} height={16} />
+          <BtnCloseModal />
         </div>
         {children}
       </div>

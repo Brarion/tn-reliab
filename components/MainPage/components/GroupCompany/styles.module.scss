@@ -85,6 +85,7 @@
       background-image: $gradient-2;
 
       -webkit-background-clip: text;
+      -webkit-box-decoration-break: clone;
       -webkit-text-fill-color: transparent;
 
       > *:nth-child(2) {

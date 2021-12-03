@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import cn from 'classnames'
 import styles from './styles.module.scss'
+import BtnCloseMenu from '@public/assets/btnCloseMenu.svg'
 
 type Props = {
   onClose: () => void
@@ -32,7 +33,7 @@ const MobileMenu = ({ onClose }: Props) => {
   return (
     <div className={wrapperStyles}>
       <div className={styles.head}>
-        <Image loading={'eager'} src={'/assets/logoMobile.svg'} alt={'Технологии надежности'} width={128} height={40} />
+        <BtnCloseMenu />
         <div className={styles.btnMenu} onClick={handleClose}>
           <Image loading={'eager'} src={'/assets/btnCloseMenu.svg'} alt={''} width={16} height={16} />
         </div>

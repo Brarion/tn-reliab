@@ -4,6 +4,7 @@ import styles from './styles.module.scss'
 import useResize from '../../utils/useResize'
 import React, { useEffect, useState } from 'react'
 import MobileMenu from '@components/MobileMenu'
+import ButtonOpenMenu from '@public/assets/btnOpenMenu.svg'
 
 const Header = () => {
   const width = useResize()
@@ -44,9 +45,9 @@ const Header = () => {
               </li>
             </ul>
           )}
-          {width <= 768 && !openedMenu && (
+          {width <= 768 && (
             <div className={styles.btnMenu} onClick={openMenu}>
-              <Image loading={'eager'} src={'/assets/btnOpenMenu.svg'} alt={''} width={25} height={25} />
+              <ButtonOpenMenu />
             </div>
           )}
         </header>

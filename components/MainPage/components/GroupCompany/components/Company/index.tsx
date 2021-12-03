@@ -46,6 +46,7 @@ const Company = (props: Props) => {
   return (
     <>
       <article className={styles.company}>
+        {/*<Image src={image} alt={header} width={77} height={77} />*/}
         <Image src={image} alt={header} width={77} height={77} />
         <div className={styles.companyInfo}>
           <h2>{header}</h2>

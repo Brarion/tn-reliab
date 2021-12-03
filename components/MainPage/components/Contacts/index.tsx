@@ -3,18 +3,16 @@ import Contact from '@components/Contact'
 import React from 'react'
 import useResize from '../../../../utils/useResize'
 import styles from './styles.module.scss'
-import Background1 from '@public/assets/background5.svg'
-import Background2 from '@public/assets/background6.svg'
 
 const Contacts = () => {
   const width = useResize()
   return (
     <div className={styles.wrapper}>
       <div className={styles.imgWrapper1}>
-        <Image src={Background1} alt={''} width={175} height={175} />
+        <Image src={'/assets/background5.svg'} alt={''} width={175} height={175} />
       </div>
       <div className={styles.imgWrapper2}>
-        <Image src={Background2} alt={''} width={176} height={176} />
+        <Image src={'/assets/background6.svg'} alt={''} width={176} height={176} />
       </div>
       <div className={styles.content}>
         <div className={styles.left}>

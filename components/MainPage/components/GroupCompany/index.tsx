@@ -3,16 +3,7 @@ import React, { useState } from 'react'
 import Company from '@components/MainPage/components/GroupCompany/components/Company'
 import Contact from '@components/Contact'
 import styles from './styles.module.scss'
-import pirs from '@public/assets/pirs.svg'
-import geoexpert from '@public/assets/geoexpert.svg'
-import kvanta from '@public/assets/kvanta.svg'
-import element from '@public/assets/element.svg'
-import expertChoice from '@public/assets/expertChoice.svg'
-import skypower from '@public/assets/skypower.svg'
 import Modal from '@components/Modal'
-import Background1 from '@public/assets/background3.svg'
-import Background2 from '@public/assets/background4.svg'
-import Background3 from '@public/assets/background7.svg'
 
 const GroupCompany = () => {
   const [openedModal, setOpenedModal] = useState<boolean>(false)
@@ -39,16 +30,16 @@ const GroupCompany = () => {
 
       <div className={styles.wrapper}>
         <div className={styles.imgWrapper1}>
-          <Image src={Background1} alt={''} width={466} height={466} />
+          <Image src={'/assets/background3.svg'} alt={''} width={466} height={466} />
         </div>
         <div className={styles.imgWrapper2}>
-          <Image src={Background2} alt={''} width={704} height={704} />
+          <Image src={'/assets/background4.svg'} alt={''} width={704} height={704} />
         </div>
         <div className={styles.imgWrapper3}>
-          <Image src={Background1} alt={''} width={210} height={210} />
+          <Image src={'/assets/background3.svg'} alt={''} width={210} height={210} />
         </div>
         <div className={styles.imgWrapper4}>
-          <Image src={Background3} alt={''} width={198} height={198} />
+          <Image src={'/assets/background7.svg'} alt={''} width={198} height={198} />
         </div>
         <div className={styles.text}>
           <span className={styles.text1}>Группа компаний ТН </span>
@@ -60,7 +51,7 @@ const GroupCompany = () => {
         </div>
         <div className={styles.information}>
           <Company
-            image={pirs}
+            image={'/assets/pirs.svg'}
             header={'Пирс'}
             text={'Разработка программных и технических систем, комплексов для бизнеса'}
             countEmployees={44}
@@ -72,7 +63,7 @@ const GroupCompany = () => {
           <div className={styles.verticalLine} />
           <div className={styles.lineColumn} />
           <Company
-            image={geoexpert}
+            image={'/assets/geoexpert.svg'}
             header={'Geoexpert'}
             text={'Георадиолокация и радарные системы для подповерхностного зондирования и навигации'}
             countEmployees={44}
@@ -86,7 +77,7 @@ const GroupCompany = () => {
           <div className={styles.horizontalLine} />
           <div className={styles.lineColumn} />
           <Company
-            image={kvanta}
+            image={'/assets/kvanta.svg'}
             header={'KVANTA'}
             text={'Разработка электроники'}
             countEmployees={44}
@@ -98,7 +89,7 @@ const GroupCompany = () => {
           <div className={styles.verticalLine} />
           <div className={styles.lineColumn} />
           <Company
-            image={element}
+            image={'/assets/element.svg'}
             header={'Пятый элемент'}
             text={'Разработка и поддержка программного обеспечения'}
             countEmployees={44}
@@ -112,7 +103,7 @@ const GroupCompany = () => {
           <div className={styles.horizontalLine} />
           <div className={styles.lineColumn} />
           <Company
-            image={expertChoice}
+            image={'/assets/expertChoice.svg'}
             header={'Expert Choice CIS'}
             text={'Аудит и автоматизация бизнеса'}
             countEmployees={44}
@@ -124,7 +115,7 @@ const GroupCompany = () => {
           <div className={styles.verticalLine} />
           <div className={styles.lineColumn} />
           <Company
-            image={skypower}
+            image={'/assets/skypower.svg'}
             header={'Skypower'}
             text={'Беспилотные технологии'}
             countEmployees={44}

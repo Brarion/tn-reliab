@@ -3,9 +3,6 @@ import Button from '@components/Button'
 import styles from './styles.module.scss'
 import React from 'react'
 
-import Background1 from '@public/assets/background1.svg'
-import Background2 from '@public/assets/background2.svg'
-
 const Jumbotron = () => {
   const handleClick = () => {
     // Перейти на Contacts
@@ -14,10 +11,10 @@ const Jumbotron = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.imgWrapper1}>
-        <Image src={Background1} alt={''} width={175} height={175} />
+        <Image src={'/assets/background1.svg'} alt={''} width={175} height={175} />
       </div>
       <div className={styles.imgWrapper2}>
-        <Image src={Background2} alt={''} width={176} height={176} />
+        <Image src={'/assets/background2.svg'} alt={''} width={176} height={176} />
       </div>
       <div className={styles.mainContent}>
         <div className={styles.leftSide}>

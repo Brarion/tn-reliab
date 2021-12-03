@@ -23,8 +23,12 @@
   }
 
   .btnMenu {
-    margin-top: 13px;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .mainContent {
@@ -100,7 +104,7 @@
 
 @keyframes toBottom {
   from {
-    top: -100%;
+    top: -100vh;
   }
   to {
     top: 0;
@@ -112,6 +116,6 @@
     top: 0;
   }
   to {
-    top: -100%;
+    top: -100vh;
   }
 }
