@@ -32,9 +32,9 @@ const MobileMenu = ({ onClose }: Props) => {
   return (
     <div className={wrapperStyles}>
       <div className={styles.head}>
-        <Image src={'/assets/logoMobile.svg'} alt={'Технологии надежности'} width={128} height={40} />
+        <Image loading={'eager'} src={'/assets/logoMobile.svg'} alt={'Технологии надежности'} width={128} height={40} />
         <div className={styles.btnMenu} onClick={handleClose}>
-          <Image src={'/assets/btnCloseMenu.svg'} alt={''} width={16} height={16} />
+          <Image loading={'eager'} src={'/assets/btnCloseMenu.svg'} alt={''} width={16} height={16} />
         </div>
       </div>
       <div className={styles.mainContent}>
