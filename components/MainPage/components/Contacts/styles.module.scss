@@ -9,19 +9,14 @@
 
   .imgWrapper1 {
     position: absolute;
-    left: 290px;
-    top: -140px;
-    //background: $blue-4;
-    //opacity: 0.77;
-    //filter: blur(150px);
+    left: 120px;
+    top: -350px;
     z-index: 1;
   }
   .imgWrapper2 {
     position: absolute;
-    left: 220px;
-    top: -90px;
-    //background: $pink-1;
-    //filter: blur(200px);
+    left: 100px;
+    top: -250px;
     z-index: 1;
   }
   .content {
@@ -142,18 +137,14 @@
   .wrapper {
     margin-top: 139px;
     .imgWrapper1 {
-      width: 113px;
-      height: 113px;
-      left: 60px;
-      top: -60px;
-      //filter: blur(100px);
+      width: 500px;
+      height: 500px;
+      left: -100px;
+      top: -250px;
     }
     .imgWrapper2 {
-      width: 114px;
-      height: 114px;
-      left: 15px;
-      top: -25px;
-      //filter: blur(100px);
+      left: -130px;
+      top: -200px;
     }
     .content {
       grid-template-columns: calc(100vw - 2 * 30px);
