@@ -49,19 +49,31 @@ const Header = () => {
           {width > 768 && (
             <ul>
               <li>
-                <a onClick={clickToJumbotron}>Главная</a>
+                <a onClick={clickToJumbotron}>
+                  Главная
+                  <div className={styles.afterLine} />
+                </a>
               </li>
               <div className={styles.ellipse} />
               <li>
-                <a onClick={clickToAboutAs}>О нас</a>
+                <a onClick={clickToAboutAs}>
+                  О нас
+                  <div className={styles.afterLine} />
+                </a>
               </li>
               <div className={styles.ellipse} />
               <li>
-                <a onClick={clickToJobs}>Наша работа </a>
+                <a onClick={clickToJobs}>
+                  Наша работа
+                  <div className={styles.afterLine} />
+                </a>
               </li>
               <div className={styles.ellipse} />
               <li>
-                <a onClick={clickToContacts}>Контакты</a>
+                <a onClick={clickToContacts}>
+                  Контакты
+                  <div className={styles.afterLine} />
+                </a>
               </li>
             </ul>
           )}
