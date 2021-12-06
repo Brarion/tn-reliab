@@ -18,17 +18,15 @@ const GroupCompany = () => {
 
   return (
     <>
-      {openedModal && (
-        <Modal onClose={closeModal}>
-          <div className={styles.modalContent}>
-            <h2>Мы свяжемся с Вами</h2>
-            <p>Оставьте свои контактные данные и наш специалист ответит Вам в кратчайшие сроки</p>
-            <Contact />
-          </div>
-        </Modal>
-      )}
+      <Modal opened={openedModal} onClose={closeModal}>
+        <div className={styles.modalContent}>
+          <h2>Мы свяжемся с Вами</h2>
+          <p>Оставьте свои контактные данные и наш специалист ответит Вам в кратчайшие сроки</p>
+          <Contact />
+        </div>
+      </Modal>
 
-      <div className={styles.wrapper}>
+      <div id={'aboutAs'} className={styles.wrapper}>
         <div className={styles.imgWrapper1}>
           <Image src={'/assets/background3.svg'} alt={''} width={466} height={466} />
         </div>

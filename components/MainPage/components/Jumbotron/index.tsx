@@ -5,11 +5,12 @@ import React from 'react'
 
 const Jumbotron = () => {
   const handleClick = () => {
-    // Перейти на Contacts
+    const contactsElement = document.getElementById('contacts')
+    contactsElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div id={'jumbotron'} className={styles.wrapper}>
       <div className={styles.imgWrapper1}>
         <Image src={'/assets/background1.svg'} alt={''} width={175} height={175} />
       </div>

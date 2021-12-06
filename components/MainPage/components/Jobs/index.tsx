@@ -45,7 +45,7 @@ const Jobs = () => {
   }, [width])
 
   return (
-    <div className={styles.wrapper}>
+    <div id={'jobs'} className={styles.wrapper}>
       <div className={styles.content}>
         <div className={styles.imgWrapper}>
           <Image src={'/assets/donut.svg'} alt={''} width={50} height={62} />

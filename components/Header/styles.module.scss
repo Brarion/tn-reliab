@@ -28,6 +28,17 @@
         margin-right: 28px !important;
       }
 
+      .ellipse {
+        min-width: 4px;
+        min-height: 4px;
+        width: 4px !important;
+        height: 4px !important;
+        max-width: 4px;
+        max-height: 4px;
+        background: $gray-2;
+        border-radius: 2px;
+      }
+
       li {
         list-style-type: none;
 
@@ -77,6 +88,14 @@
       > span > span > img {
         cursor: pointer;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    > header {
+      padding: 20px 24px 0 25px;
     }
   }
 }

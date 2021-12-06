@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import styles from './styles.module.scss'
 import useResize from '../../utils/useResize'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import MobileMenu from '@components/MobileMenu'
 import ButtonOpenMenu from '@public/assets/btnOpenMenu.svg'
 
@@ -18,6 +18,26 @@ const Header = () => {
     setOpenedMenu(false)
   }
 
+  const clickToJumbotron = () => {
+    const jumbotronElement = document.getElementById('jumbotron')
+    jumbotronElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
+  }
+
+  const clickToAboutAs = () => {
+    const aboutAsElement = document.getElementById('aboutAs')
+    aboutAsElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
+  }
+
+  const clickToJobs = () => {
+    const jobsElement = document.getElementById('jobs')
+    jobsElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
+  }
+
+  const clickToContacts = () => {
+    const contactsElement = document.getElementById('contacts')
+    contactsElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
+  }
+
   return (
     <>
       {openedMenu && width <= 768 && <MobileMenu onClose={closeMenu} />}
@@ -29,19 +49,19 @@ const Header = () => {
           {width > 768 && (
             <ul>
               <li>
-                <a href={'/main'}>Главная</a>
+                <a onClick={clickToJumbotron}>Главная</a>
               </li>
-              <Image alt={''} src={'/assets/ellipse.svg'} width={4} height={4} />
+              <div className={styles.ellipse} />
               <li>
-                <a href={'/about-as'}>О нас</a>
+                <a onClick={clickToAboutAs}>О нас</a>
               </li>
-              <Image alt={''} src={'/assets/ellipse.svg'} width={4} height={4} />
+              <div className={styles.ellipse} />
               <li>
-                <a href={'/jobs'}>Наша работа </a>
+                <a onClick={clickToJobs}>Наша работа </a>
               </li>
-              <Image alt={''} src={'/assets/ellipse.svg'} width={4} height={4} />
+              <div className={styles.ellipse} />
               <li>
-                <a href={'/contacts'}>Контакты</a>
+                <a onClick={clickToContacts}>Контакты</a>
               </li>
             </ul>
           )}

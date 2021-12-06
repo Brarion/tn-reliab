@@ -3,6 +3,7 @@ import Image from 'next/image'
 import cn from 'classnames'
 import styles from './styles.module.scss'
 import BtnCloseMenu from '@public/assets/btnCloseMenu.svg'
+import LogoMobile from '@public/assets/logoMobile.svg'
 
 type Props = {
   onClose: () => void
@@ -30,26 +31,50 @@ const MobileMenu = ({ onClose }: Props) => {
     [styles.closing]: closeAnimation,
   })
 
+  const clickToJumbotron = () => {
+    handleClose()
+    const jumbotronElement = document.getElementById('jumbotron')
+    jumbotronElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
+  }
+
+  const clickToAboutAs = () => {
+    handleClose()
+    const aboutAsElement = document.getElementById('aboutAs')
+    aboutAsElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
+  }
+
+  const clickToJobs = () => {
+    handleClose()
+    const jobsElement = document.getElementById('jobs')
+    jobsElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
+  }
+
+  const clickToContacts = () => {
+    handleClose()
+    const contactsElement = document.getElementById('contacts')
+    contactsElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
+  }
+
   return (
     <div className={wrapperStyles}>
       <div className={styles.head}>
-        <Image loading={'eager'} src={'/assets/logoMobile.svg'} alt={''} width={173} height={40} />
+        <LogoMobile />
         <div className={styles.btnMenu} onClick={handleClose}>
           <BtnCloseMenu />
         </div>
       </div>
       <div className={styles.mainContent}>
         <div className={styles.item}>
-          <a href={'/main'}>Главная</a>
+          <a onClick={clickToJumbotron}>Главная</a>
         </div>
         <div className={styles.item}>
-          <a href={'/about-as'}>О нас</a>
+          <a onClick={clickToAboutAs}>О нас</a>
         </div>
         <div className={styles.item}>
-          <a href={'/jobs'}>Наша работа </a>
+          <a onClick={clickToJobs}>Наша работа </a>
         </div>
         <div className={styles.item}>
-          <a href={'/contacts'}>Контакты</a>
+          <a onClick={clickToContacts}>Контакты</a>
         </div>
       </div>
       <div className={styles.contacts}>

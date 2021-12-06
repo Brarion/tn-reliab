@@ -7,7 +7,7 @@ import styles from './styles.module.scss'
 const Contacts = () => {
   const width = useResize()
   return (
-    <div className={styles.wrapper}>
+    <div id={'contacts'} className={styles.wrapper}>
       <div className={styles.imgWrapper1}>
         <Image src={'/assets/background5.svg'} alt={''} width={175} height={175} />
       </div>
