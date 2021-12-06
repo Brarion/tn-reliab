@@ -9,10 +9,10 @@ const Contacts = () => {
   return (
     <div id={'contacts'} className={styles.wrapper}>
       <div className={styles.imgWrapper1}>
-        <Image src={'/assets/background5.svg'} alt={''} width={175} height={175} />
+        <Image src={'/assets/test1.png'} alt={''} width={175} height={175} />
       </div>
       <div className={styles.imgWrapper2}>
-        <Image src={'/assets/background6.svg'} alt={''} width={176} height={176} />
+        <Image src={'/assets/test2.png'} alt={''} width={176} height={176} />
       </div>
       <div className={styles.content}>
         <div className={styles.left}>
