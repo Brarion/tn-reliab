@@ -33,9 +33,9 @@ const MobileMenu = ({ onClose }: Props) => {
   return (
     <div className={wrapperStyles}>
       <div className={styles.head}>
-        <BtnCloseMenu />
+        <Image loading={'eager'} src={'/assets/logoMobile.svg'} alt={''} width={173} height={40} />
         <div className={styles.btnMenu} onClick={handleClose}>
-          <Image loading={'eager'} src={'/assets/btnCloseMenu.svg'} alt={''} width={16} height={16} />
+          <BtnCloseMenu />
         </div>
       </div>
       <div className={styles.mainContent}>
