@@ -2,16 +2,17 @@ import Image from 'next/image'
 import styles from './styles.module.scss'
 import { ReactNode } from 'react'
 import useResize from '../../../../../../utils/useResize'
+import COMPANIES from '../../../../../../types/companies'
 
 type Props = {
   image: string
-  header: string
+  header: COMPANIES
   text: string
   countEmployees: number
   countProjects: number
   textEmployees: string
   textProjects: string
-  openModal: () => void
+  openModal: (company: COMPANIES) => void
 }
 
 const Company = (props: Props) => {
@@ -19,12 +20,16 @@ const Company = (props: Props) => {
 
   const width = useResize()
 
+  const handleClick = () => {
+    openModal(header)
+  }
+
   const getTextAndAdditionalInfo = (): ReactNode => {
     return (
       <>
         <p>{text}</p>
         <div className={styles.additionalInfo}>
-          <button onClick={openModal}>СВЯЗАТЬСЯ</button>
+          <button onClick={handleClick}>СВЯЗАТЬСЯ</button>
           <div className={styles.line} />
           <div className={styles.stuff}>
             <Image src={'/assets/stuff.svg'} alt={''} width={14} height={15} />
@@ -46,7 +51,6 @@ const Company = (props: Props) => {
   return (
     <>
       <article className={styles.company}>
-        {/*<Image src={image} alt={header} width={77} height={77} />*/}
         <Image src={image} alt={header} width={77} height={77} />
         <div className={styles.companyInfo}>
           <h2>{header}</h2>

@@ -4,29 +4,30 @@ import Company from '@components/MainPage/components/GroupCompany/components/Com
 import Contact from '@components/Contact'
 import styles from './styles.module.scss'
 import Modal from '@components/Modal'
+import COMPANIES from '../../../../types/companies'
 
 const GroupCompany = () => {
-  const [openedModal, setOpenedModal] = useState<boolean>(false)
+  const [openedCompany, setOpenedCompany] = useState<COMPANIES | null>(null)
 
-  const openModal = () => {
-    setOpenedModal(true)
+  const openModal = (company: COMPANIES) => {
+    setOpenedCompany(company)
   }
 
   const closeModal = () => {
-    setOpenedModal(false)
+    setOpenedCompany(null)
   }
 
   return (
     <>
-      <Modal opened={openedModal} onClose={closeModal}>
+      <Modal opened={!!openedCompany} onClose={closeModal}>
         <div className={styles.modalContent}>
           <h2>Мы свяжемся с Вами</h2>
           <p>Оставьте свои контактные данные и наш специалист ответит Вам в кратчайшие сроки</p>
-          <Contact />
+          <Contact company={openedCompany as COMPANIES} />
         </div>
       </Modal>
 
-      <div id={'aboutAs'} className={styles.wrapper}>
+      <div id={'aboutUs'} className={styles.wrapper}>
         <div className={styles.imgWrapper1}>
           <Image src={'/assets/background3.svg'} alt={''} width={466} height={466} />
         </div>
@@ -50,7 +51,7 @@ const GroupCompany = () => {
         <div className={styles.information}>
           <Company
             image={'/assets/pirs.svg'}
-            header={'Пирс'}
+            header={COMPANIES.PIRS}
             text={'Разработка программных и технических систем, комплексов для бизнеса'}
             countEmployees={44}
             countProjects={20}
@@ -62,7 +63,7 @@ const GroupCompany = () => {
           <div className={styles.lineColumn} />
           <Company
             image={'/assets/geoexpert.svg'}
-            header={'Geoexpert'}
+            header={COMPANIES.GEOEXPERT}
             text={'Георадиолокация и радарные системы для подповерхностного зондирования и навигации'}
             countEmployees={44}
             countProjects={20}
@@ -76,7 +77,7 @@ const GroupCompany = () => {
           <div className={styles.lineColumn} />
           <Company
             image={'/assets/kvanta.svg'}
-            header={'KVANTA'}
+            header={COMPANIES.KVANTA}
             text={'Разработка электроники'}
             countEmployees={44}
             countProjects={20}
@@ -88,7 +89,7 @@ const GroupCompany = () => {
           <div className={styles.lineColumn} />
           <Company
             image={'/assets/element.svg'}
-            header={'Пятый элемент'}
+            header={COMPANIES.FIVE_ELEMENT}
             text={'Разработка и поддержка программного обеспечения'}
             countEmployees={44}
             countProjects={20}
@@ -102,7 +103,7 @@ const GroupCompany = () => {
           <div className={styles.lineColumn} />
           <Company
             image={'/assets/expertChoice.svg'}
-            header={'Expert Choice CIS'}
+            header={COMPANIES.EXPERT_CHOICE_CIS}
             text={'Аудит и автоматизация бизнеса'}
             countEmployees={44}
             countProjects={20}
@@ -114,7 +115,7 @@ const GroupCompany = () => {
           <div className={styles.lineColumn} />
           <Company
             image={'/assets/skypower.svg'}
-            header={'Skypower'}
+            header={COMPANIES.SKYPOWER}
             text={'Беспилотные технологии'}
             countEmployees={44}
             countProjects={20}

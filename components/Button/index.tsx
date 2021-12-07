@@ -1,3 +1,5 @@
+import cn from 'classnames'
+
 import styles from './styles.module.scss'
 
 type Props = {
@@ -8,8 +10,12 @@ type Props = {
 }
 
 const Button = ({ text, className, onClick, type }: Props) => {
+  const buttonStyles = cn(styles.defaultButton, {
+    [className as string]: className,
+  })
+
   return (
-    <button className={`${styles.button} ${className}`} onClick={onClick} type={type}>
+    <button className={buttonStyles} onClick={onClick} type={type}>
       {text}
     </button>
   )

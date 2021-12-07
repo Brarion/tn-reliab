@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
 import cn from 'classnames'
 import styles from './styles.module.scss'
 import BtnCloseMenu from '@public/assets/btnCloseMenu.svg'
@@ -34,12 +33,12 @@ const MobileMenu = ({ onClose }: Props) => {
   const clickToJumbotron = () => {
     handleClose()
     const jumbotronElement = document.getElementById('jumbotron')
-    jumbotronElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
+    jumbotronElement!.scrollIntoView({ block: 'center', behavior: 'smooth' })
   }
 
-  const clickToAboutAs = () => {
+  const clickToAboutUs = () => {
     handleClose()
-    const aboutAsElement = document.getElementById('aboutAs')
+    const aboutAsElement = document.getElementById('aboutUs')
     aboutAsElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
   }
 
@@ -68,7 +67,7 @@ const MobileMenu = ({ onClose }: Props) => {
           <a onClick={clickToJumbotron}>Главная</a>
         </div>
         <div className={styles.item}>
-          <a onClick={clickToAboutAs}>О нас</a>
+          <a onClick={clickToAboutUs}>О нас</a>
         </div>
         <div className={styles.item}>
           <a onClick={clickToJobs}>Наша работа </a>

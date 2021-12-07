@@ -20,11 +20,11 @@ const Header = () => {
 
   const clickToJumbotron = () => {
     const jumbotronElement = document.getElementById('jumbotron')
-    jumbotronElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
+    jumbotronElement!.scrollIntoView({ block: 'center', behavior: 'smooth' })
   }
 
-  const clickToAboutAs = () => {
-    const aboutAsElement = document.getElementById('aboutAs')
+  const clickToAboutUs = () => {
+    const aboutAsElement = document.getElementById('aboutUs')
     aboutAsElement!.scrollIntoView({ block: 'start', behavior: 'smooth' })
   }
 
@@ -56,7 +56,7 @@ const Header = () => {
               </li>
               <div className={styles.ellipse} />
               <li>
-                <a onClick={clickToAboutAs}>
+                <a onClick={clickToAboutUs}>
                   О нас
                   <div className={styles.afterLine} />
                 </a>

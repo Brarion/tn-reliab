@@ -1,11 +1,13 @@
-import { HTMLInputTypeAttribute, useEffect, useState } from 'react'
+import { useState } from 'react'
 import Input from '@components/Input'
 import TextArea from '@components/TextArea'
-import styles from './styles.module.scss'
 import Button from '@components/Button'
+import COMPANIES from '../../types/companies'
+import { emailApi } from '@api'
+import styles from './styles.module.scss'
 
 enum FORM_KEY {
-  TEXT = 'text',
+  NAME = 'name',
   EMAIL = 'email',
   COMMENT = 'comment',
 }
@@ -21,7 +23,7 @@ type FormItem = {
 type Form = { [key in FORM_KEY]: FormItem }
 
 const FORM_INITIAL_VALUES: Form = {
-  [FORM_KEY.TEXT]: {
+  [FORM_KEY.NAME]: {
     value: '',
     placeholder: 'Как к Вам обратиться?',
     type: 'text',
@@ -44,7 +46,11 @@ const FORM_INITIAL_VALUES: Form = {
   },
 }
 
-const Contact = () => {
+type Props = {
+  company?: COMPANIES
+}
+
+const Contact = ({ company }: Props) => {
   const [form, setForm] = useState<Form>(FORM_INITIAL_VALUES)
   const validate = () => {
     const validateText = (value: string): { error: boolean; helperText: string } => {
@@ -63,22 +69,31 @@ const Contact = () => {
 
     const newForm = { ...form }
 
-    newForm.text = { ...newForm.text, ...validateText(newForm.text.value) }
+    newForm.name = { ...newForm.name, ...validateText(newForm.name.value) }
     newForm.email = { ...newForm.email, ...validateEmail(newForm.email.value) }
     setForm(newForm)
 
     return new Promise((resolve, reject) => {
-      if (newForm.text.error || newForm.email.error) {
-        resolve(false)
+      if (newForm.name.error || newForm.email.error) {
+        reject(false)
       } else {
-        reject(true)
+        resolve(true)
       }
     })
   }
 
   const submit = () => {
     validate().then(() => {
-      console.log(true)
+      emailApi
+        .send({
+          to: 'testtn578@gmail.com',
+          from: 'testtn578@gmail.com',
+          text: `Как к Вам обратиться?: ${form.name.value}\nВаш email: ${form.email.value}\n${
+            form.comment.value ? `Cообщение: ${form.comment.value}` : ' '
+          }`,
+          subject: `${company ? company : ' '}`,
+        })
+        .then()
     })
   }
 
@@ -96,15 +111,15 @@ const Contact = () => {
   return (
     <form className={styles.wrapper}>
       <div className={styles.errors}>
-        {(form.text.error || form.email.error) && <p>Заполните все обязательные поля</p>}
+        {(form.name.error || form.email.error) && <p>Заполните все обязательные поля</p>}
       </div>
       <Input
-        type={form.text.type}
-        placeholder={form.text.placeholder}
-        value={form.text.value}
-        error={form.text.error}
-        onChange={(value) => onChange(FORM_KEY.TEXT, value)}
-        helperText={form.text.helperText}
+        type={form.name.type}
+        placeholder={form.name.placeholder}
+        value={form.name.value}
+        error={form.name.error}
+        onChange={(value) => onChange(FORM_KEY.NAME, value)}
+        helperText={form.name.helperText}
       />
       <Input
         type={form.email.type}
@@ -121,7 +136,7 @@ const Contact = () => {
         onChange={(value) => onChange(FORM_KEY.COMMENT, value)}
         helperText={form.comment.helperText}
       />
-      <Button text={'Отправить'} className={styles.button} onClick={submit} type={'button'} />
+      <Button text={'Отправить'} className={styles.buttonSend} onClick={submit} type={'button'} />
     </form>
   )
 }
