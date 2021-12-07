@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from 'react'
+import React, { ReactNode, useCallback, useEffect } from 'react'
 import Image from 'next/image'
 import BtnCloseModal from '@public/assets/closeModalIcon.svg'
 import styles from './styles.module.scss'
@@ -11,11 +11,14 @@ type Props = {
 }
 
 const Modal = ({ children, onClose, opened }: Props) => {
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      onClose()
-    }
-  }
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose()
+      }
+    },
+    [onClose]
+  )
 
   useEffect(() => {
     if (opened) {
@@ -26,7 +29,7 @@ const Modal = ({ children, onClose, opened }: Props) => {
       document.body.style.overflow = 'auto'
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [opened])
+  }, [opened, handleKeyDown])
 
   if (!opened) {
     return null

@@ -15,12 +15,16 @@
     margin: 0;
   }
 
-  .errors {
+  .message {
     display: flex;
     width: 100%;
     font-family: 'MontserratMedium', sans-serif;
     font-weight: 500;
     margin: 0;
+
+    &.centered {
+      justify-content: center;
+    }
 
     > p {
       font-size: 14px;

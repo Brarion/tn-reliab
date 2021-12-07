@@ -1,6 +1,7 @@
 import { HTMLInputTypeAttribute } from 'react'
-import cn from 'classnames'
 import Image from 'next/image'
+import cn from 'classnames'
+
 import styles from './styles.module.scss'
 
 type Props = {

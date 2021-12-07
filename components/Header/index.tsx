@@ -1,10 +1,13 @@
+import React, { useState } from 'react'
 import Image from 'next/image'
 
-import styles from './styles.module.scss'
-import useResize from '../../utils/useResize'
-import React, { useState } from 'react'
 import MobileMenu from '@components/MobileMenu'
+
 import ButtonOpenMenu from '@public/assets/btnOpenMenu.svg'
+
+import useResize from '../../utils/useResize'
+
+import styles from './styles.module.scss'
 
 const Header = () => {
   const width = useResize()

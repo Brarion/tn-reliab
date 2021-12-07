@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import Company from '@components/MainPage/components/GroupCompany/components/Company'
-import Contact from '@components/Contact'
+import ContactForm from '@components/ContactForm'
 import styles from './styles.module.scss'
 import Modal from '@components/Modal'
 import COMPANIES from '../../../../types/companies'
@@ -23,7 +23,7 @@ const GroupCompany = () => {
         <div className={styles.modalContent}>
           <h2>Мы свяжемся с Вами</h2>
           <p>Оставьте свои контактные данные и наш специалист ответит Вам в кратчайшие сроки</p>
-          <Contact company={openedCompany as COMPANIES} />
+          <ContactForm company={openedCompany as COMPANIES} />
         </div>
       </Modal>
 

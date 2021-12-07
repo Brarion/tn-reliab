@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import cn from 'classnames'
 import Input from '@components/Input'
 import TextArea from '@components/TextArea'
 import Button from '@components/Button'
@@ -50,8 +51,12 @@ type Props = {
   company?: COMPANIES
 }
 
-const Contact = ({ company }: Props) => {
+const ContactForm = ({ company }: Props) => {
   const [form, setForm] = useState<Form>(FORM_INITIAL_VALUES)
+  const [messageSent, setMessageSent] = useState<boolean>(false)
+
+  let timer: ReturnType<typeof setTimeout> | null = null
+
   const validate = () => {
     const validateText = (value: string): { error: boolean; helperText: string } => {
       return value === '' ? { error: true, helperText: '*Обязательное поле' } : { error: false, helperText: '' }
@@ -84,16 +89,23 @@ const Contact = ({ company }: Props) => {
 
   const submit = () => {
     validate().then(() => {
+      setForm(FORM_INITIAL_VALUES)
       emailApi
         .send({
           to: 'testtn578@gmail.com',
           from: 'testtn578@gmail.com',
           text: `Как к Вам обратиться?: ${form.name.value}\nВаш email: ${form.email.value}\n${
-            form.comment.value ? `Cообщение: ${form.comment.value}` : ' '
+            form.comment.value ? `Сообщение: ${form.comment.value}` : ' '
           }`,
           subject: `${company ? company : ' '}`,
         })
-        .then()
+        .then(() => {
+          setMessageSent(true)
+
+          timer = setTimeout(() => {
+            setMessageSent(false)
+          }, 5000)
+        })
     })
   }
 
@@ -106,12 +118,22 @@ const Contact = ({ company }: Props) => {
         error: false,
       },
     })
+    setMessageSent(false)
+
+    if (timer) {
+      clearTimeout(timer)
+    }
   }
+
+  const messageClassName = cn(styles.message, {
+    [styles.centered]: company,
+  })
 
   return (
     <form className={styles.wrapper}>
-      <div className={styles.errors}>
+      <div className={messageClassName}>
         {(form.name.error || form.email.error) && <p>Заполните все обязательные поля</p>}
+        {messageSent && <p>Письмо отправлено</p>}
       </div>
       <Input
         type={form.name.type}
@@ -141,4 +163,4 @@ const Contact = ({ company }: Props) => {
   )
 }
 
-export default Contact
+export default ContactForm

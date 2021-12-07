@@ -17,7 +17,7 @@ const MobileMenu = ({ onClose }: Props) => {
       document.body.style.overflow = 'auto'
       onClose()
     }
-  }, [])
+  }, [onClose])
 
   const handleClose = () => {
     setCloseAnimation(true)

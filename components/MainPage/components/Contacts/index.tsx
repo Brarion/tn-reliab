@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Contact from '@components/Contact'
+import ContactForm from '@components/ContactForm'
 import React from 'react'
 import useResize from '../../../../utils/useResize'
 import styles from './styles.module.scss'
@@ -38,7 +38,7 @@ const Contacts = () => {
           )}
         </div>
         <div className={styles.right}>
-          <Contact />
+          <ContactForm />
         </div>
         {width < 915 && (
           <div className={styles.maps}>

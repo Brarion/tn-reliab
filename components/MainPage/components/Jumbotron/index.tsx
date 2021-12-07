@@ -25,7 +25,7 @@ const Jumbotron = () => {
               Уделяем особое внимание проектированию интерфейсов, в&nbsp;результате чего мы с горостью можем назвать
               наши продукты Надёжными!
             </p>
-            <Button text={'старт с нами'} test={styles.button} onClick={handleClick} type={'button'} />
+            <Button text={'старт с нами'} className={styles.button} onClick={handleClick} type={'button'} />
           </div>
           <aside>
             <div className={styles.line} />

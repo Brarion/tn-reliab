@@ -42,7 +42,7 @@ const Jobs = () => {
       const currentElement = document.getElementById(openedJobId.toString())
       currentElement!.style.height = `${getJobHeight(currentElement)}px`
     }
-  }, [width])
+  }, [width, openedJobId])
 
   return (
     <div id={'jobs'} className={styles.wrapper}>
