@@ -1,7 +1,10 @@
-import Image from 'next/image'
-import ContactForm from '@components/ContactForm'
 import React from 'react'
-import useResize from '../../../../utils/useResize'
+import Image from 'next/image'
+
+import ContactForm from '@components/ContactForm'
+
+import useResize from '@utils/useResize'
+
 import styles from './styles.module.scss'
 
 const Contacts = () => {

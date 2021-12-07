@@ -1,8 +1,11 @@
-import Image from 'next/image'
-import styles from './styles.module.scss'
 import { ReactNode } from 'react'
-import useResize from '../../../../../../utils/useResize'
-import COMPANIES from '../../../../../../types/companies'
+import Image from 'next/image'
+
+import useResize from '@utils/useResize'
+
+import COMPANIES from '@projectTypes/companies'
+
+import styles from './styles.module.scss'
 
 type Props = {
   image: string

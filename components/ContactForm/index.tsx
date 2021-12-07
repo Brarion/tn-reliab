@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import cn from 'classnames'
+
 import Input from '@components/Input'
 import TextArea from '@components/TextArea'
 import Button from '@components/Button'
-import COMPANIES from '../../types/companies'
+
 import { emailApi } from '@api'
+
+import COMPANIES from '@projectTypes/companies'
+
 import styles from './styles.module.scss'
 
 enum FORM_KEY {

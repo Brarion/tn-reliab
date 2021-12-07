@@ -5,7 +5,7 @@ import MobileMenu from '@components/MobileMenu'
 
 import ButtonOpenMenu from '@public/assets/btnOpenMenu.svg'
 
-import useResize from '../../utils/useResize'
+import useResize from '@utils/useResize'
 
 import styles from './styles.module.scss'
 

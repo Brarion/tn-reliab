@@ -1,13 +1,16 @@
+import React from 'react'
 import Image from 'next/image'
-import React, { useState } from 'react'
+
 import Company from '@components/MainPage/components/GroupCompany/components/Company'
 import ContactForm from '@components/ContactForm'
-import styles from './styles.module.scss'
 import Modal from '@components/Modal'
-import COMPANIES from '../../../../types/companies'
+
+import COMPANIES from '@projectTypes/companies'
+
+import styles from './styles.module.scss'
 
 const GroupCompany = () => {
-  const [openedCompany, setOpenedCompany] = useState<COMPANIES | null>(null)
+  const [openedCompany, setOpenedCompany] = React.useState<COMPANIES | null>(null)
 
   const openModal = (company: COMPANIES) => {
     setOpenedCompany(company)

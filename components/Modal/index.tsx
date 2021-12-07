@@ -1,17 +1,19 @@
-import React, { ReactNode, useCallback, useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
+
 import BtnCloseModal from '@public/assets/closeModalIcon.svg'
-import styles from './styles.module.scss'
 import modalBackground from '@public/assets/modalBackground.png'
 
+import styles from './styles.module.scss'
+
 type Props = {
-  children: ReactNode
+  children: React.ReactNode
   onClose: () => void
   opened: boolean
 }
 
 const Modal = ({ children, onClose, opened }: Props) => {
-  const handleKeyDown = useCallback(
+  const handleKeyDown = React.useCallback(
     (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         onClose()
@@ -20,7 +22,7 @@ const Modal = ({ children, onClose, opened }: Props) => {
     [onClose]
   )
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (opened) {
       document.body.style.overflow = 'hidden'
       document.addEventListener('keydown', handleKeyDown)

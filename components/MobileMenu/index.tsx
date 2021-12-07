@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import cn from 'classnames'
-import styles from './styles.module.scss'
+
 import BtnCloseMenu from '@public/assets/btnCloseMenu.svg'
 import LogoMobile from '@public/assets/logoMobile.svg'
+
+import styles from './styles.module.scss'
 
 type Props = {
   onClose: () => void
 }
 
 const MobileMenu = ({ onClose }: Props) => {
-  const [closeAnimation, setCloseAnimation] = useState<boolean>(false)
+  const [closeAnimation, setCloseAnimation] = React.useState<boolean>(false)
 
-  useEffect(() => {
+  React.useEffect(() => {
     document.body.style.overflow = 'hidden'
     return () => {
       document.body.style.overflow = 'auto'

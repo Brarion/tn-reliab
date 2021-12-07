@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 import { SendEmail } from './types'
 
 const emailApi = {

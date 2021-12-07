@@ -1,9 +1,13 @@
-import Image from 'next/image'
-import styles from './styles.module.scss'
-import OpeningList from '@components/MainPage/components/Jobs/components/OpeningList'
-import JobsArray from './jobs'
 import React, { useEffect, useState } from 'react'
-import useResize from '../../../../utils/useResize'
+import Image from 'next/image'
+
+import OpeningList from '@components/MainPage/components/Jobs/components/OpeningList'
+
+import useResize from '@utils/useResize'
+
+import JobsArray from './jobs'
+
+import styles from './styles.module.scss'
 
 const Jobs = () => {
   const [openedJobId, setOpenedJobId] = useState<number | null>(null)
