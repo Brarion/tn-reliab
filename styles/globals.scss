@@ -1,38 +1,5 @@
 @import 'colors.scss';
 
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../public/fonts/Montserrat-Regular.ttf') format('truetype');
-  font-weight: normal;
-
-  //font-display: auto;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'MontserratBold';
-  src: url('../public/fonts/Montserrat-Bold.ttf') format('truetype');
-
-  //font-display: auto;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'MontserratLight';
-  src: url('../public/fonts/Montserrat-Light.ttf') format('truetype');
-
-  //font-display: auto;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'MontserratMedium';
-  src: url('../public/fonts/Montserrat-Medium.ttf') format('truetype');
-
-  //font-display: auto;
-  font-display: swap;
-}
-
 html,
 body {
   margin: 0;
