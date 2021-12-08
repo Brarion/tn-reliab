@@ -14,7 +14,7 @@ const OpeningList = (props: Props) => {
     <div className={styles.wrapper}>
       <div className={`${styles.header} ${opened ? styles.opening : ''}`} onClick={() => onClick(id)}>
         <h1>{header}</h1>
-        <button>
+        <button className={styles.btnOpen}>
           <div />
           <div />
         </button>
