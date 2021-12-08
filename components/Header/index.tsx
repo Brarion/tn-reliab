@@ -54,28 +54,28 @@ const Header = () => {
               <li>
                 <a onClick={clickToJumbotron}>
                   Главная
-                  <div className={styles.afterLine} />
+                  {/*<div className={styles.afterLine} />*/}
                 </a>
               </li>
               <li className={styles.ellipse} />
               <li>
                 <a onClick={clickToAboutUs}>
                   О нас
-                  <div className={styles.afterLine} />
+                  {/*<div className={styles.afterLine} />*/}
                 </a>
               </li>
               <li className={styles.ellipse} />
               <li>
                 <a onClick={clickToJobs}>
                   Наша работа
-                  <div className={styles.afterLine} />
+                  {/*<div className={styles.afterLine} />*/}
                 </a>
               </li>
               <li className={styles.ellipse} />
               <li>
                 <a onClick={clickToContacts}>
                   Контакты
-                  <div className={styles.afterLine} />
+                  {/*<div className={styles.afterLine} />*/}
                 </a>
               </li>
             </ul>
