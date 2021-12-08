@@ -24,7 +24,7 @@ const OpeningList = (props: Props) => {
         {items.map((item) => (
           <li key={item}>{item}</li>
         ))}
-        <div className={styles.horizontalLine} />
+        <li className={styles.horizontalLine} />
       </ul>
     </div>
   )
