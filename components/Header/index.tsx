@@ -50,35 +50,35 @@ const Header = () => {
             <Image loading={'eager'} src={'/assets/logo.svg'} alt={'Технологии надежности'} width={128} height={40} />
           </div>
           {width > 768 && (
-            <ul>
-              <li>
+            <div className={styles.navbar}>
+              <div className={styles.item}>
                 <a onClick={clickToJumbotron}>
                   Главная
                   {/*<div className={styles.afterLine} />*/}
                 </a>
-              </li>
-              <li className={styles.ellipse} />
-              <li>
+              </div>
+              <div className={styles.ellipse} />
+              <div className={styles.item}>
                 <a onClick={clickToAboutUs}>
                   О нас
                   {/*<div className={styles.afterLine} />*/}
                 </a>
-              </li>
-              <li className={styles.ellipse} />
-              <li>
+              </div>
+              <div className={styles.ellipse} />
+              <div className={styles.item}>
                 <a onClick={clickToJobs}>
                   Наша работа
                   {/*<div className={styles.afterLine} />*/}
                 </a>
-              </li>
-              <li className={styles.ellipse} />
-              <li>
+              </div>
+              <div className={styles.ellipse} />
+              <div className={styles.item}>
                 <a onClick={clickToContacts}>
                   Контакты
                   {/*<div className={styles.afterLine} />*/}
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           )}
           {width <= 768 && (
             <div className={styles.btnMenu} onClick={openMenu}>

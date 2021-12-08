@@ -20,7 +20,7 @@
       height: 40px;
     }
 
-    ul {
+    .navbar {
       display: flex;
       align-items: center;
 
@@ -42,7 +42,7 @@
         text-decoration: none;
       }
 
-      li:not(.ellipse) {
+      .item:not(.ellipse) {
         list-style-type: none;
 
         text-decoration: none;
