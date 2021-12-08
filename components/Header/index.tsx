@@ -57,21 +57,21 @@ const Header = () => {
                   <div className={styles.afterLine} />
                 </a>
               </li>
-              <div className={styles.ellipse} />
+              <li className={styles.ellipse} />
               <li>
                 <a onClick={clickToAboutUs}>
                   О нас
                   <div className={styles.afterLine} />
                 </a>
               </li>
-              <div className={styles.ellipse} />
+              <li className={styles.ellipse} />
               <li>
                 <a onClick={clickToJobs}>
                   Наша работа
                   <div className={styles.afterLine} />
                 </a>
               </li>
-              <div className={styles.ellipse} />
+              <li className={styles.ellipse} />
               <li>
                 <a onClick={clickToContacts}>
                   Контакты

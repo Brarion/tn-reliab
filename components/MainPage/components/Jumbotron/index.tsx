@@ -42,7 +42,7 @@ const Jumbotron = () => {
         <div className={styles.contacts}>
           <div className={styles.item}>
             <a href={'tel:+7 (800) 555-30-53'}>
-              <Image src={'/assets/tel.svg'} alt={''} width={50} height={50} />
+              <Image src={'/assets/tel.svg'} alt={'+7 (800) 555-30-53'} width={50} height={50} />
             </a>
             <div className={styles.contactInfo}>
               <h3>Приёмная</h3>
@@ -51,7 +51,7 @@ const Jumbotron = () => {
           </div>
           <div className={styles.item}>
             <a href={'mailto:tn@reliab.tech'}>
-              <Image src={'/assets/email.svg'} alt={''} width={50} height={50} />
+              <Image src={'/assets/email.svg'} alt={'mailto:tn@reliab.tech'} width={50} height={50} />
             </a>
             <div className={styles.contactInfo}>
               <h3>Менеджер</h3>

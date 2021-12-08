@@ -37,9 +37,12 @@
         max-height: 4px;
         background: $gray-2;
         border-radius: 2px;
+        list-style-type: none;
+
+        text-decoration: none;
       }
 
-      li {
+      li:not(.ellipse) {
         list-style-type: none;
 
         text-decoration: none;
