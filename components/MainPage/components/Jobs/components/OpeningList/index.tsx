@@ -14,7 +14,7 @@ const OpeningList = (props: Props) => {
     <div className={styles.wrapper}>
       <div className={`${styles.header} ${opened ? styles.opening : ''}`} onClick={() => onClick(id)}>
         <h1>{header}</h1>
-        <button className={styles.btnOpen}>
+        <button aria-label={'opening'}>
           <div />
           <div />
         </button>

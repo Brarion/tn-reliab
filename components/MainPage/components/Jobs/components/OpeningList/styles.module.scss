@@ -21,14 +21,14 @@
     }
 
     &.opening {
-      > .btnOpen {
+      > button {
         > *:last-child {
           transform: rotate(0deg);
         }
       }
     }
 
-    .btnOpen {
+    button {
       position: relative;
       cursor: pointer;
       border: none;
@@ -62,7 +62,7 @@
         color: $black-2;
       }
 
-      > .btnOpen {
+      > button {
         > * {
           border-top: 1px solid $black-2;
         }
@@ -101,7 +101,7 @@
         line-height: 24px;
       }
 
-      > .btnOpen {
+      > button {
         min-width: 30px;
         min-height: 30px;
         max-width: 30px;
