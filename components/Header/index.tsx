@@ -52,31 +52,19 @@ const Header = () => {
           {width > 768 && (
             <div className={styles.navbar}>
               <div className={styles.item}>
-                <a onClick={clickToJumbotron}>
-                  Главная
-                  {/*<div className={styles.afterLine} />*/}
-                </a>
+                <a onClick={clickToJumbotron}>Главная</a>
               </div>
               <div className={styles.ellipse} />
               <div className={styles.item}>
-                <a onClick={clickToAboutUs}>
-                  О нас
-                  {/*<div className={styles.afterLine} />*/}
-                </a>
+                <a onClick={clickToAboutUs}>О нас</a>
               </div>
               <div className={styles.ellipse} />
               <div className={styles.item}>
-                <a onClick={clickToJobs}>
-                  Наша работа
-                  {/*<div className={styles.afterLine} />*/}
-                </a>
+                <a onClick={clickToJobs}>Наша работа</a>
               </div>
               <div className={styles.ellipse} />
               <div className={styles.item}>
-                <a onClick={clickToContacts}>
-                  Контакты
-                  {/*<div className={styles.afterLine} />*/}
-                </a>
+                <a onClick={clickToContacts}>Контакты</a>
               </div>
             </div>
           )}
