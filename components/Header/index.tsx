@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Image from 'next/image'
 
 import MobileMenu from '@components/MobileMenu'
 
 import ButtonOpenMenu from '@public/assets/btnOpenMenu.svg'
+import ImgLogo from '@public/assets/logo.svg'
 
 import useResize from '@utils/useResize'
 
@@ -47,7 +47,7 @@ const Header = () => {
       <div className={styles.wrapper}>
         <header>
           <div className={styles.imgLogoWrapper}>
-            <Image loading={'eager'} src={'/assets/logo.svg'} alt={'Технологии надежности'} width={128} height={40} />
+            <ImgLogo />
           </div>
           <div className={styles.navbar}>
             <div className={styles.item}>
@@ -69,7 +69,6 @@ const Header = () => {
           <div className={styles.btnMenu} onClick={openMenu}>
             <ButtonOpenMenu />
           </div>
-          {/*)}*/}
         </header>
       </div>
     </>
