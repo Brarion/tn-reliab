@@ -22,7 +22,7 @@ const Jumbotron = () => {
       <div className={styles.mainContent}>
         <div className={styles.leftSide}>
           <div className={styles.text}>
-            <h2>Помогаем вашему бизнесу прокачаться до максимального уровня</h2>
+            <h2>Помогаем вашему&nbsp;бизнесу прокачаться до максимального уровня</h2>
             <p>
               Уделяем особое внимание проектированию интерфейсов, в&nbsp;результате чего мы с горостью можем назвать
               наши продукты Надёжными!
@@ -35,7 +35,7 @@ const Jumbotron = () => {
           </aside>
         </div>
         <div className={styles.imgPhoneWrapper}>
-          <img alt={'Технологии надёжности'} src={'/assets/phone1.png'} />
+          <img alt={'Технологии надёжности'} src={'/assets/phone.png'} />
         </div>
       </div>
       <div className={styles.information}>

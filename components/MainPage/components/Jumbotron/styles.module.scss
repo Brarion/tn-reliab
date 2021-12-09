@@ -181,9 +181,20 @@
 
 @media screen and (max-width: 768px) {
   .wrapper {
-    .imgWrapper1,
+    .imgWrapper1 {
+      left: 70px;
+      top: 270px;
+      height: 50px;
+      width: 50px;
+      filter: blur(50px);
+    }
+
     .imgWrapper2 {
-      display: none;
+      left: 120px;
+      top: 200px;
+      height: 63px;
+      width: 63px;
+      filter: blur(50px);
     }
 
     .mainContent {
