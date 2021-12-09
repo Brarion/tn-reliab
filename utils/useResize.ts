@@ -1,7 +1,7 @@
 import React from 'react'
 
 const useResize = () => {
-  const [width, setWidth] = React.useState<number | null>(null)
+  const [width, setWidth] = React.useState<number | null>(1920)
 
   const handleResize = () => {
     return setWidth(document.documentElement.clientWidth)
