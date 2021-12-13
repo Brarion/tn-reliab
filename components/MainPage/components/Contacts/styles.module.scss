@@ -12,12 +12,14 @@
     left: 120px;
     top: -350px;
     z-index: 1;
+    max-width: 100vw;
   }
   .imgWrapper2 {
     position: absolute;
     left: 100px;
     top: -250px;
     z-index: 1;
+    max-width: 100vw;
   }
   .content {
     display: grid;
