@@ -32,7 +32,9 @@ const Company = (props: Props) => {
       <>
         <p>{text}</p>
         <div className={styles.additionalInfo}>
-          <button onClick={handleClick}>СВЯЗАТЬСЯ</button>
+          <button className={styles.testButton} onClick={handleClick}>
+            <span>СВЯЗАТЬСЯ</span>
+          </button>
           <div className={styles.line} />
           <div className={styles.stuff}>
             <Image src={'/assets/stuff.svg'} alt={''} width={14} height={15} />

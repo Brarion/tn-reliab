@@ -98,7 +98,7 @@ const ContactForm = ({ company }: Props) => {
         .send({
           to: 'testtn578@gmail.com',
           from: 'testtn578@gmail.com',
-          text: `Как к Вам обратиться?: ${form.name.value}\nВаш email: ${form.email.value}\n${
+          text: `Имя: ${form.name.value}\nEmail: ${form.email.value}\n${
             form.comment.value ? `Сообщение: ${form.comment.value}` : ' '
           }`,
           subject: `${company ? company : ' '}`,
