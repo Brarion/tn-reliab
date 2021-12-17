@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
+        <link rel={'preload'} href={'/assets/modalBackground.webp'} as={'image'} type={'image/webp'} />
       </Head>
       <Component {...pageProps} />
     </html>
