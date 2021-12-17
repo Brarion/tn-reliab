@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 
 import BtnCloseModal from '@public/assets/closeModalIcon.svg'
 
@@ -47,16 +46,7 @@ const Modal = ({ children, onClose, opened }: Props) => {
 
   return (
     <div className={styles.modalWrapper}>
-      <div onClick={onClose} className={styles.background}>
-        <Image
-          src={'/assets/modalBackground.webp'}
-          alt={''}
-          width={'100%'}
-          height={'100%'}
-          loading={'eager'}
-          priority
-        />
-      </div>
+      <div onClick={onClose} className={styles.background} />
       <div className={styles.modal}>
         <div className={styles.closeModalIcon} onClick={onClose}>
           <BtnCloseModal />
