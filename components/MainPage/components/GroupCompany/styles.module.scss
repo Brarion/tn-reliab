@@ -51,6 +51,7 @@
     opacity: 1;
     filter: blur(402px);
     z-index: 1;
+    user-select: none;
   }
 
   .imgWrapper2 {
@@ -61,11 +62,14 @@
     opacity: 0.1;
     filter: blur(402px);
     z-index: 1;
+    user-select: none;
   }
 
   .imgWrapper3,
   .imgWrapper4 {
     display: none;
+    z-index: 1;
+    user-select: none;
   }
 
   .text {
@@ -77,6 +81,8 @@
     font-size: 52px;
     line-height: 63px;
     font-weight: bold;
+    z-index: 2;
+    position: relative;
 
     .text1 {
       color: $blue-2;
