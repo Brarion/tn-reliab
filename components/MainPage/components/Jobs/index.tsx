@@ -52,7 +52,7 @@ const Jobs = () => {
     <div id={'jobs'} className={styles.wrapper}>
       <div className={styles.content}>
         <div className={styles.imgWrapper}>
-          <Image src={'/assets/donut.svg'} alt={''} width={50} height={62} />
+          <Image src={'/assets/donut.webp'} alt={''} width={50} height={62} />
         </div>
         <h2>Как мы работаем</h2>
         <div className={styles.horizontalLine} />
